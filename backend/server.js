@@ -25,7 +25,7 @@ if (!fs.existsSync(uploadsDir)) {
 
 // Database Connection
 // Database Connection
-mongoose.connect(process.env.MONGO_URI || 'mongodb://https://e-learning-management-system-j748.onrender.com/lms_project')
+mongoose.connect(process.env.MONGO_URI || 'mongodb://localhost:27017/lms_project')
     .then(() => console.log('MongoDB Connected'))
     .catch(err => console.error('MongoDB Connection Error:', err));
 
