@@ -12,7 +12,11 @@ const PORT = process.env.PORT || 5000;
 
 // Middleware
 app.use(express.json());
-app.use(cors());
+app.use(cors({
+  origin: "https://e-learning-management-system-7e88-git-main-nandan-jks-projects.vercel.app/", // your frontend URL
+  credentials: true
+}));
+
 
 // Static folder for uploads
 app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
